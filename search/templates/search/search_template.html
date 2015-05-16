@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>iBAT - Search</title>
+	<meta name="description" content="iBAT - Search">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">IBAT</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Search</a></li>
+            <li><a href="#upload">Upload</a></li>
+
+          </ul>
+          <p class="navbar-text navbar-right">
+            Signed in as
+            <a href="#" class="navbar-link">Bryan Yap</a>
+           </p>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome</h1>
+			<p>Infineon Budget Assitive Tool (IBAT) is here to help you...</p>
+				<form action="">
+					<div class="form-group">
+						<input type="text" id="element-1" class="form-control" placeholder="Actionable Item">
+					</div>
+				</form>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p>Employees</p>
+                {% if employee_list %}
+				<ul class="list-group">
+                    {% for employee in employee_list %}
+					<li class="list-group-item">{{ employee.name }}</li>
+                    {% endfor %}
+				</ul>
+                {% else %}
+                <p>No polls are available.</p>
+                {% endif %}
+			</div>
+			<div class="col-sm-6">
+				<p>Vendors</p>
+				<ul class="list-group">
+					<li class="list-group-item">Vendor 1</li>
+					<li class="list-group-item">Vendor 2</li>
+					<li class="list-group-item">Vendor 3</li>
+					<li class="list-group-item">Vendor 4</li>
+					<li class="list-group-item">Vendor 5</li>
+				</ul>
+			</div>
+		</div>
+	<div>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>	
+</html>
